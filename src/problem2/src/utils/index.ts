@@ -1,3 +1,4 @@
+import { BASE_TOKEN_IMAGE_URL } from "@/constants";
 import type { IToken, RawToken } from "@/types";
 
 export function sleep(ms: number = 1e3) {
@@ -29,8 +30,6 @@ export function compareByCurrency(a: IToken, b: IToken) {
   return a.currency.localeCompare(b.currency);
 }
 
-
-const BASE_TOKEN_IMAGE_URL = "https://raw.githubusercontent.com/Switcheo/token-icons/main/tokens";
 export function getTokenImageUrl(currency: string) {
   // Some tokens have different names in the API response compared to the image file names
   const currencyMap: Record<string, string> = {

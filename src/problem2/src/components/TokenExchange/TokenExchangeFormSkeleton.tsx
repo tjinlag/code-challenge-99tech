@@ -3,7 +3,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 function FieldSkeleton() {
   return (
     <div className='flex flex-col gap-2 w-full'>
-      <Skeleton className="h-6 w-30" />
+      <Skeleton className="h-5 w-30" />
       <Skeleton className="h-8 w-full" />
     </div>
   )
@@ -11,7 +11,7 @@ function FieldSkeleton() {
 
 export function TokenExchangeFormSkeleton() {
   return (
-    <div className='flex flex-col gap-4 w-xs items-center'>
+    <div className='flex flex-col gap-4 w-full max-w-xs items-center'>
       <FieldSkeleton />
       <FieldSkeleton />
 

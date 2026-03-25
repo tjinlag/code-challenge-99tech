@@ -61,7 +61,7 @@ export function TokenExchangeForm({ tokens, isSubmitting, onExchange }: Props) {
   }
 
   return (
-    <div className='flex flex-col gap-4 w-xs'>
+    <div className='flex flex-col gap-4 w-full max-w-xs items-center'>
       <Field>
         <FieldLabel>From Token</FieldLabel>
         <TokenSelect
@@ -78,7 +78,7 @@ export function TokenExchangeForm({ tokens, isSubmitting, onExchange }: Props) {
         <FieldError errors={[{ message: errors?.tokenSend }]} />
       </Field>
 
-      <Button className='rounded-full w-fit mx-auto bg-gray-500 w-12 h-12 hover:bg-gray-700 hover:cursor-pointer' onClick={handleRevert}>
+      <Button className='rounded-full w-fit bg-gray-500 w-12 h-12 hover:bg-gray-700 hover:cursor-pointer' onClick={handleRevert}>
         <ArrowDownUp />
       </Button>
 
@@ -98,7 +98,7 @@ export function TokenExchangeForm({ tokens, isSubmitting, onExchange }: Props) {
         <FieldError errors={[{ message: errors?.tokenReceive }]} />
       </Field>
 
-      <Button className='py-5 rounded-xl mt-5' disabled={isSubmitting || Object.keys(errors || {}).length > 0} onClick={handleSubmit}>
+      <Button className='py-5 rounded-xl mt-5 w-full' disabled={isSubmitting || Object.keys(errors || {}).length > 0} onClick={handleSubmit}>
         {isSubmitting ? 'EXCHANGING...' : 'EXCHANGE'}
       </Button>
     </div>

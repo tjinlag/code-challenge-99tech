@@ -25,9 +25,12 @@ function App() {
   }
 
   return (
-    <div className='w-full h-screen flex flex-col items-center'>
-      <h1 className='fluid text-4xl font-bold mx-auto text-center my-8'>Curency Swap</h1>
+    <div className='w-full h-screen flex flex-col items-center px-5 py-3'>
+      <h1 className='fluid text-4xl font-bold mx-auto text-center my-8'>Currency Swap</h1>
 
+      <div className='flex gap-4'>
+
+      </div>
       {
         isTokenLoading ? (
           <TokenExchangeFormSkeleton />
